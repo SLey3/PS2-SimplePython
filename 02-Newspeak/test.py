@@ -1,5 +1,10 @@
-# File: testp.py
+# File: test.py
 # Author: Sergio Ley Languren
+
+"""
+Program to test Newspeak.py functions
+"""
+
 from Newspeak import negate, intensify, reinforce
 from time import sleep
 
@@ -41,3 +46,15 @@ print("Result:\n")
 sleep(1)
 print(result)
 assert result == "doublepluscold", WordIncorrect(f"{result} did not meet the expected result of: doublepluscold")
+sleep(1)
+print("Test reinforce.2:\n")
+sleep(1)
+print(f"the word is {word2}. The expected result is: doubleplusun{word2}")
+sleep(1)
+result = reinforce(intensify(negate(word2)))
+print("Result:\n")
+sleep(1)
+print(result)
+assert result == "doubleplusungood", WordIncorrect(f"{result} did not meet the expected result of: doubleplusungood")
+sleep(1)
+print("test ran successfully")

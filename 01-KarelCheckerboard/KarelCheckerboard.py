@@ -8,7 +8,6 @@ import turns
 
 def checkerboard():
     """Draws a checkerboard pattern in beepers."""
-    find_starting_point()
     write()
     
 def find_starting_point():
@@ -18,7 +17,8 @@ def find_starting_point():
 
 def write():
     """writes the checkerboard pattern"""
-    while beepers_in_bag():
+    while left_is_clear():
+        find_starting_point()
         write_beeper_line()
         turn_left()
         move()
